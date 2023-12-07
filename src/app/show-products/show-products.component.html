@@ -1,0 +1,13 @@
+<p>showappartment works!</p>
+{{ id }}
+<div *ngFor="let a of listProdcut; let i = index">
+  <div *ngIf="id == a.id">
+    <li>
+      {{ a.id  }}
+      {{ a.title  }}
+      {{ a.price  }}
+      {{ a.quantity  }}
+    </li>
+  </div>
+</div>
+

@@ -1,0 +1,134 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .nav-link {
+            color: #007bff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #007bff;
+            border-radius: 4px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<div class="container">
+  <form [formGroup]="appartform">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">id</span>
+      </div>
+      <input
+        type="text"
+        aria-label="Num Appart"
+        name="id"
+        id="id"
+        class="form-control"
+        formControlName="id"
+      />
+      
+    </div>
+    <br />
+
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">title</span>
+      </div>
+      <input
+        type="text"
+        aria-label="title"
+        class="form-control"
+        formControlName="title"
+      />
+
+    </div>
+    <br />
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">price</span>
+      </div>
+      <input
+        type="text"
+        aria-label="price"
+        class="form-control"
+        formControlName="price"
+      />
+    </div>
+    <br />
+
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">quantity</span>
+        </div>
+        <input
+          type="text"
+          aria-label="quantity"
+          class="form-control"
+          formControlName="quantity"
+        />
+      </div>
+    <br />
+    <br />
+    <input
+      type="submit"
+      aria-label="add"
+      class="bg-danger"
+      value="add product"
+      (click)="add()"
+    />
+  </form>
+</div>

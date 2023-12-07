@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .nav-link {
+            color: #007bff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #007bff;
+            border-radius: 4px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<p>List products</p>
+<table border="3">
+    <tr>
+        <td>Id</td>
+        <td>title</td>
+        <td>price</td>
+        <td>quantity</td>
+        <td>like</td>
+        <td>show</td>
+
+    </tr>
+    <tr *ngFor="let r of listProdcut ;let i=index">
+        <td>{{r.id}}</td>
+        <td>{{r.title}}</td>
+        <td>{{r.price}}</td>
+        <td>{{r.quantity}}</td>
+        <td>{{r.like}}</td>
+        <button [routerLink]="[r.id]" class="btn btn-danger">show product </button>
+    </tr>
+</table>
+
+<a class="nav-link" routerLinkActivate="active" routerLink="/add"> add product</a>
+
+</body>
